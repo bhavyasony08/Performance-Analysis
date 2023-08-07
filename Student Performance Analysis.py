@@ -110,6 +110,8 @@ labels = 'Some College', "Associate's Degree", 'High School', 'Some High School'
 color = ['red', 'green', 'blue', 'cyan', 'orange', 'grey']
 plt.pie(size, colors=color, labels=labels, autopct='%.2f%%')
 plt.title('Parental Education', fontsize=20)
+X = df.drop(columns="math score",axis=1)
+y = df["math score"] 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=42)
 X_train.shape, X_test.shape
